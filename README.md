@@ -22,3 +22,6 @@ The Customer Churn dataset contains information on all 7,043 customers from a Te
 ### Source
 Publically available telecom customer churn Kaggle dataset in csv format.( https://www.kaggle.com/datasets/alfathterry/telco-customer-churn-11-1-3/data )
 The dataset has approximately 7,043 rows and 50 columns, with each row representing an individual customer.
+### Data Cleaning and Preprocessing
+Dropped some of the columns which are irrelevant and not needed for analysis and prediction. Missing values in categorical column Internet Type is replaced with 'No', in column churn category missing values are replaced with 'Other' and in churn reasons with 'Don't Know'.
+
