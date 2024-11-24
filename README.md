@@ -20,4 +20,5 @@ Customer churn refers to the phenomenon where customers stop using a company’s
 
 The Customer Churn dataset contains information on all 7,043 customers from a Telecommunications company in California. Each record represents one customer and contains details about their demographics, location, tenure, contract types, subscription services, customer status etc. Churn label is the target.
 ### Source
-Publically available Kaggle dataset.( https://www.kaggle.com/datasets/alfathterry/telco-customer-churn-11-1-3/data )
+Publically available telecom customer churn Kaggle dataset in csv format.( https://www.kaggle.com/datasets/alfathterry/telco-customer-churn-11-1-3/data )
+The dataset has approximately 7,043 rows and 50 columns, with each row representing an individual customer.
