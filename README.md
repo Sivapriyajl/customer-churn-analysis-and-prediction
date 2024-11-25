@@ -14,7 +14,7 @@ This project aims to predict customer churn in subscription based services using
 
   ## Project Overview
 
-Customer churn refers to the phenomenon where customers stop using a company’s services within a specific period. For subscription-based businesses like telecom providers, understanding and predicting churn is critical, as retaining existing customers is generally more cost-effective than acquiring new ones. The project utilizes SQL for data handling, Python for data processing and modeling and Power BI to create an interactive dashboard that visualizes key insights and trends related to churn.
+Customer churn refers to the phenomenon where customers stop using a company’s services within a specific period. For subscription-based businesses like telecom providers, understanding and predicting churn is critical, as retaining existing customers is generally more cost-effective than acquiring new ones. The project utilizes SQL for data handling, Python for data analysis and modeling and Power BI to create an interactive dashboard that visualizes key insights and trends related to churn.
   
 ## Dataset
 
@@ -23,5 +23,29 @@ The Customer Churn dataset contains information on all 7,043 customers from a Te
 Publically available telecom customer churn Kaggle dataset in csv format.( https://www.kaggle.com/datasets/alfathterry/telco-customer-churn-11-1-3/data )
 The dataset has approximately 7,043 rows and 50 columns, with each row representing an individual customer.
 ### Data Cleaning and Preprocessing
-Dropped some of the columns which are irrelevant and not needed for analysis and prediction. Missing values in categorical column Internet Type is replaced with 'No', in column churn category missing values are replaced with 'Other' and in churn reasons with 'Don't Know'.
+To prepare the data for analysis and prediction, the following cleaning and preprocessing steps were performed:
+**Column Dropping:** 
+Irrelevant columns not required for analysis or prediction were removed from the dataset.
+**Handling Missing Values:**
+In the Internet Type column, missing values were replaced with "No" to indicate a lack of internet service.
+In the Churn Category column, missing values were filled with "Other."
+In the Churn Reasons column, missing values were replaced with "Don't Know."
+**New Column Creation:**
+An age_group column was created by categorizing ages into Young Adult, Middle-Aged Adult, Senior Citizen, and Elderly to understand churn patterns across different age groups.
+A high_revenue_customer column with boolean values was added based on Total Revenue to indicate customers who generate high revenue, providing insight into churn among valuable customers.
+
+## Methodology
+### Project Workflow
+1. Data collection, cleaning and processing
+2. Exploratory data analysis
+3. Feature engineering
+4. Model building and evaluation
+5. PowerBi Dashboard
+
+
+
+
+
+
+
 
