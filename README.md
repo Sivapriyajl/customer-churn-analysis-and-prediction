@@ -70,7 +70,7 @@ Majority of customers did not specify a reason. This might indicate a lack of cl
 Most preferred internet service type amoung customers is fibre optic and dsl, fibre optics also have higher number of churn rate  compared to other types. Month to Month contract and two year contract types keep more customers. However customers who has month to month contract basis are more likely to churn.
 
 ![churn vs internet type](images/plot3.png)
-![churn vs contract type](images/plot3.png)
+![churn vs contract type](images/plot4.png)
 
 
 
