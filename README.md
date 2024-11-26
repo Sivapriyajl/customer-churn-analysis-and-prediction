@@ -72,13 +72,26 @@ Most preferred internet service type amoung customers is fibre optic and dsl, fi
 ![churn vs internet type](images/plot3.png)
 ![churn vs contract type](images/plot4.png)
 
+**4.How does monthly charge, total charges, tenure in months impact churn?**
+Customer with lower monthly charges are more likely to stay but customers with lower total charges are more likely to churn.This implies that customers on lower-cost plans may perceive greater value for the price, reducing their likelihood of leaving. Also newer customers, who haven’t invested as much financially in the service, may be quicker to leave if they encounter issues or don’t see value.Customer subscribed to short tenure mostly like to churn. Tenure in months and total charges are highly correlated.
+Customers with high cltv are most likely to stays loyal. CLTV can serve as a predictive indicator of loyalty. High-CLTV customers are often more engaged and satisfied. 
 
+![](images/plot5.png)
 
-
-
-
-
-
+### 4.Feature engineering
+Feature engineering transforms raw data into meaningful features to improve model performance.
+**Encoding Categorical Variables**
+Categorical variables like gender, contract, internet_type, payment_method, and age_group were converted into numerical format using one-hot encoding.
+**Converting Boolean Columns to Integers**
+Any boolean columns were converted to integer format to ensure compatibility with machine learning algorithms, which often expect numerical inputs.
+**Dropping Unnecessary Columns**
+Certain columns that were unnecessary for the model were removed from the dataset to reduce noise and improve computational efficiency.
+Identifiers and location information (customer_id, country, state, city)
+Outcome variables and other post-churn information (customer_status, churn_category, churn_reason, churn_score, satisfaction_score, cltv)
+Time period identifier (quarter)
+**Scaling Numerical Features**
+To ensure all features have a similar scale, numerical variables were scaled to a range between 0 and 1 using Min-Max Scaling. This scaling helps prevent features with larger ranges from dominating the model's learning process.
+![](images/Screenshot_4.png)
 
 
 
