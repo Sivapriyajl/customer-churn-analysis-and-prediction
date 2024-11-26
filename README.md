@@ -128,7 +128,7 @@ There are (FP)74 customers who are predicted to churn when they actually wont ch
 ![XGB](images/Screenshot_7.png)
 
 **Model Feature Importance**
-![Feature Importance](images/plot5.png.png)
+![Feature Importance][images/plot6.png]
 
 To further validate the model's robustness and applicability, a simulated dataset was generated based on the distribution of key features in the original dataset. This dataset included 1,000 samples with randomized values for numerical, boolean and categorical features, closely resembling the range and variability of the original data. The model was then used to predict churn on this simulated data, providing insights into how it performs with new, unseen records. This additional testing helps to assess the model's generalization ability and its potential for real-world application in predicting customer churn. The predicted churn labels were appended to the simulated data for further analysis.
 
@@ -178,3 +178,6 @@ To further validate the model's robustness and applicability, a simulated datase
 
 
 
+
+
+[def]: images/plot6.png
