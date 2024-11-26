@@ -36,7 +36,6 @@ The dataset has approximately 7,043 rows and 50 columns, with each row represent
 
 ### 1.Data collection and loading
 Initially i created a table telecom_analysis in database telecom in Postgresql and read the dataset as CSV file using pandas and then imported data to Postgresql table.
-![Loading Process](images/Screenshot_1.png)
 ![telecom_analysis table](images/Screenshot_2.png)
 
 ### 2.Data Cleaning and Preprocessing
@@ -91,8 +90,43 @@ Outcome variables and other post-churn information (customer_status, churn_categ
 Time period identifier (quarter)
 **Scaling Numerical Features**
 To ensure all features have a similar scale, numerical variables were scaled to a range between 0 and 1 using Min-Max Scaling. This scaling helps prevent features with larger ranges from dominating the model's learning process.
-![](images/Screenshot_4.png)
 
 
+### 5.Model building and evaluation
+In this project, 4 machine learning algorithms are selected and compared that are already in Scikit-Learn to choose the one that provide better performance.
+1.RandomForestClassifier
+2.DecisionTreeClassifier
+3.KNeighborsClassifier
+4.XGBoost Classifier   
 
+**Data splitting**
+ The data was split into training and test sets with an 85:15 ratio, using stratification to maintain the balance of the target variable (churn) across both sets.
+**Cross Validation**
+Each model was evaluated using 5-fold cross-validation on the training set. Cross-validation provides a robust measure of model performance by reducing the impact of data variability and helps identify the best-performing model before final testing.
+
+![cross-validation result](images/Screenshot_5.png)
+**Performance Comparison**
+XGBoost had the highest cross-validated test score (AUC-ROC = 0.8954), indicating it was the best performer at distinguishing between churned and non-churned customers.
+Random Forest followed closely with an AUC-ROC of 0.8872, showing strong predictive capability as well.
+Decision Tree and KNN showed lower test scores, suggesting they were less effective at capturing the complexity of the data.
+
+**Evaluation and Interpretation**
+After comparing the models with cross-validation, XGBoost and Random Forest were selected for further evaluation on the test set, as they demonstrated the best balance of predictive performance.
+Both Random Forest model and XGBoost model was trained on the training set and evaluated on the test set. Key evaluation metrics, including the classification report and confusion matrix, are provided to assess model performance on unseen data.
+
+RandomForestClassifier showed a 83% accuracy and weighted average metrics are consistent with overall performance.XGBooster accuracy of 84% indicates that the model performs well in distinguishing between customers who churn and those who stay. Precision and recall scores reveal that the model is particularly effective at identifying non-churners.
+**Confusion matrix**
+
+**RFC**
+Succussfully predicted (TN)713 customers who dont churn and (TP)169 who churn.
+There are (FP)64 customers who are predicted to churn when they actually wont churn and (FN)111 customers to not churn when they actually churn 
+![RFC](images/Screenshot_6.png)
+
+**XGB**
+Succussfully predicted (TN)703 customers who dont churn and (TP)182 who churn.
+There are (FP)74 customers who are predicted to churn when they actually wont churn and (FN)98 customers to not churn when they actually churn 
+![XGB](images/Screenshot_7.png)
+
+**Model Feature Importance**
+![Feature Importance](images/plot5.png.png)
 
