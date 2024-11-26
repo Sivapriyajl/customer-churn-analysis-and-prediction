@@ -130,3 +130,51 @@ There are (FP)74 customers who are predicted to churn when they actually wont ch
 **Model Feature Importance**
 ![Feature Importance](images/plot5.png.png)
 
+To further validate the model's robustness and applicability, a simulated dataset was generated based on the distribution of key features in the original dataset. This dataset included 1,000 samples with randomized values for numerical, boolean and categorical features, closely resembling the range and variability of the original data. The model was then used to predict churn on this simulated data, providing insights into how it performs with new, unseen records. This additional testing helps to assess the model's generalization ability and its potential for real-world application in predicting customer churn. The predicted churn labels were appended to the simulated data for further analysis.
+
+## 6.PowerBi Dashboard
+
+![Overview](images/Screenshot_8.png)
+![Churn rate vs Services](images/Screenshot_9.png)
+![Predictions](images/Screenshot_10.png)
+
+### 7.Observations and Recommendations
+- **Churn Rate**: 1,869 customers (26.5%) churned.
+- **New Joiners**: 454, showing efforts in customer acquisition.
+- **Satisfaction**: Average score of 3.24 out of 5 indicates moderate satisfaction.
+- **Revenue Impact**: 
+  - Churned revenue: $139K (30.5%)
+  - Retained revenue: $317K (69.5%)
+- **High-Revenue Customers**: Significant losses due to churn, though many remain.
+- **Churn by Demographics**: Balanced across genders and age groups.
+- **Primary Churn Reasons**:
+  - Competitor offers (better services/pricing).
+  - Dissatisfaction with support or pricing.
+  - Low satisfaction scores (1–2).
+- **Monthly Charges**: High churn between $70–$100, suggesting perceived expense.
+- **Tenure**: 
+  - Shorter tenure (<10 months) has higher churn.
+  - Long-term customers are more likely to stay.
+- **Contracts**:
+  - Month-to-month: 45.8% churn.
+  - One-year: 10.7%; two-year: 2.5% churn—indicating higher loyalty with longer contracts.
+- **Payment Methods**:
+  - Mailed check (36.9%) and bank withdrawal (34%) correlate with higher churn.
+  - Credit card (14.5%) shows greater stability.
+- **High-Churn Services**:
+  - Streaming TV (56.4%), Streaming Music (61.0%), Streaming Movies (56.2%).
+  - Lower churn in Online Security (15.8%) and Backup (16.9%).
+- **Fiber Optic Users**: Higher churn rate than DSL, possibly due to pricing/service issues.
+
+### Recommendations
+1. **Improve Satisfaction**: Target high-revenue customers with enhanced support.
+2. **Address Competitor Threats**: Adjust pricing and offers to be competitive.
+3. **Enhance Retention**: Focus on month-to-month customers; offer incentives for longer-term contracts.
+4. **Optimize Streaming Services**: Address costs and improve quality to retain subscribers.
+5. **Focus on Fiber Optic Users**: Investigate and resolve service-related issues.
+6. **Customer Feedback**: Conduct regular satisfaction surveys and feedback sessions.
+7. **Loyalty Programs**: Offer discounts and rewards for long-term customers.
+
+
+
+
