@@ -34,11 +34,11 @@ The dataset has approximately 7,043 rows and 50 columns, with each row represent
 6. PowerBi Dashboard
 
 
-### 1.Data collection and loading
+## 1.Data collection and loading
 Initially i created a table telecom_analysis in database telecom in Postgresql and read the dataset as CSV file using pandas and then imported data to Postgresql table.
 ![telecom_analysis table](images/Screenshot_2.png)
 
-### 2.Data Cleaning and Preprocessing
+## 2.Data Cleaning and Preprocessing
 To prepare the data for analysis and prediction, the following cleaning and preprocessing steps were performed:
 **Column Dropping:** 
 Irrelevant columns not required for analysis or prediction were removed from the dataset.
@@ -52,7 +52,7 @@ A high_revenue_customer column with boolean values was added based on Total Reve
 **Quering and Analysis:**
 Did some basic quering to understand the churn rates among different Internet Types and contract length
 
-### 3.Exploratory Data Analysis
+## 3.Exploratory Data Analysis
 The goal of this analysis is to identify patterns and factors that impact customer churn by examining several key features to understand their relationship with churn, using visuals to uncover insights.
 
 **1.How does demographic factors like age and gender relate to churn?**
@@ -77,7 +77,7 @@ Customers with high cltv are most likely to stays loyal. CLTV can serve as a pre
 
 ![](images/plot5.png)
 
-### 4.Feature engineering
+## 4.Feature engineering
 Feature engineering transforms raw data into meaningful features to improve model performance.
 **Encoding Categorical Variables**
 Categorical variables like gender, contract, internet_type, payment_method, and age_group were converted into numerical format using one-hot encoding.
@@ -92,7 +92,7 @@ Time period identifier (quarter)
 To ensure all features have a similar scale, numerical variables were scaled to a range between 0 and 1 using Min-Max Scaling. This scaling helps prevent features with larger ranges from dominating the model's learning process.
 
 
-### 5.Model building and evaluation
+## 5.Model building and evaluation
 In this project, 4 machine learning algorithms are selected and compared that are already in Scikit-Learn to choose the one that provide better performance.
 1.RandomForestClassifier
 2.DecisionTreeClassifier
@@ -166,7 +166,7 @@ To further validate the model's robustness and applicability, a simulated datase
   - Lower churn in Online Security (15.8%) and Backup (16.9%).
 - **Fiber Optic Users**: Higher churn rate than DSL, possibly due to pricing/service issues.
 
-### Recommendations
+## Recommendations
 1. **Improve Satisfaction**: Target high-revenue customers with enhanced support.
 2. **Address Competitor Threats**: Adjust pricing and offers to be competitive.
 3. **Enhance Retention**: Focus on month-to-month customers; offer incentives for longer-term contracts.
