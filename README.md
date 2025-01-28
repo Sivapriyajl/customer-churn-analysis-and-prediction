@@ -1,4 +1,4 @@
-# customer-churn-analysis-and-prediction
+# Customer-Churn-Analysis-and-Prediction
 ## Description
 This project aims to predict customer churn in subscription based services using Python, SQL, and Power BI.
 
